@@ -23,6 +23,7 @@ public class DemoNavLab8 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo_nav_lab8);
         actionBar=getSupportActionBar();
+
         addControl();
         addEvent();
 

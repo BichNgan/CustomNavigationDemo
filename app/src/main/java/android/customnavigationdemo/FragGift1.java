@@ -62,7 +62,10 @@ public class FragGift1 extends Fragment {
         fm.setFragmentResultListener("keyMain", this, new FragmentResultListener() {
             @Override
             public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
-                    tvkq.setText(result.getString("name"));
+                String st = result.getString("name") + " - "
+                        +   result.getString("ns") + " - "
+                        +   result.getString("qq");
+                tvkq.setText(st);
             }
         });
 

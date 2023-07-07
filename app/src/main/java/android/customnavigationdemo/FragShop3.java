@@ -13,12 +13,12 @@ import android.widget.EditText;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FragShop1#newInstance} factory method to
+ * Use the {@link FragShop3#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragShop1 extends Fragment {
-    EditText edtName;
-    Button btnSend;
+public class FragShop3 extends Fragment {
+    EditText edtName3;
+    Button btnSend3;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,7 +29,7 @@ public class FragShop1 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public FragShop1() {
+    public FragShop3() {
         // Required empty public constructor
     }
 
@@ -39,11 +39,11 @@ public class FragShop1 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FragShop1.
+     * @return A new instance of fragment FragShop3.
      */
     // TODO: Rename and change types and number of parameters
-    public static FragShop1 newInstance(String param1, String param2) {
-        FragShop1 fragment = new FragShop1();
+    public static FragShop3 newInstance(String param1, String param2) {
+        FragShop3 fragment = new FragShop3();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,21 +64,20 @@ public class FragShop1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_frag_shop1, container, false);
-        edtName=(EditText) view.findViewById(R.id.edtName);
-        btnSend = (Button) view.findViewById(R.id.btnSend);
+        View view = inflater.inflate(R.layout.fragment_frag_shop3, container, false);
+        edtName3 = (EditText) view.findViewById(R.id.edtName3);
+        btnSend3 = (Button) view.findViewById(R.id.btnSend3);
 
-        btnSend.setOnClickListener(new View.OnClickListener() {
+        btnSend3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
-                bundle.putString("name",edtName.getText().toString());
-                bundle.putString("ns","2000");
-                bundle.putString("qq","TPHCM");
-                FragmentManager fm=getParentFragmentManager();
-                fm.setFragmentResult("keyMain",bundle);
+                bundle.putString("name",edtName3.getText().toString());
+                FragmentManager fragmentManager = getParentFragmentManager();
+                fragmentManager.setFragmentResult("keyM",bundle);
             }
         });
+
 
 
         return view;
